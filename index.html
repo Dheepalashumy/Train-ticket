@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking with Seat Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<h1>Book Your Train Ticket</h1>
+<form id="bookingForm">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="departure">Departure Station:</label>
+    <input type="text" id="departure" name="departure" required>
+
+    <label for="destination">Destination Station:</label>
+    <input type="text" id="destination" name="destination" required>
+
+    <label for="departureDate">Departure Date:</label>
+    <input type="date" id="departureDate" name="departureDate" required>
+
+    <label for="returnDate">Return Date:</label>
+    <input type="date" id="returnDate" name="returnDate">
+
+    <label for="class">Class:</label>
+    <select id="class" name="class" required>
+        <option value="economy">Economy</option>
+        <option value="first">First Class</option>
+    </select>
+
+    <label for="passengers">Number of Passengers:</label>
+    <input type="number" id="passengers" name="passengers" min="1" value="1" required>
+
+    <h2>Select Your Seats</h2>
+    <div id="seatSelection">
+        <div class="row">
+            <span class="seat available" data-seat="1A">1A</span>
+            <span class="seat available" data-seat="1B">1B</span>
+            <span class="seat available" data-seat="1C">1C</span>
+            <span class="seat available" data-seat="1D">1D</span>
+        </div>
+        <div class="row">
+            <span class="seat available" data-seat="2A">2A</span>
+            <span class="seat available" data-seat="2B">2B</span>
+            <span class="seat available" data-seat="2C">2C</span>
+            <span class="seat available" data-seat="2D">2D</span>
+        </div>
+        <div class="row">
+            <span class="seat available" data-seat="3A">3A</span>
+            <span class="seat available" data-seat="3B">3B</span>
+            <span class="seat available" data-seat="3C">3C</span>
+            <span class="seat available" data-seat="3D">3D</span>
+        </div>
+    </div>
+
+    <button type="submit">Book Now</button>
+</form>
+
+<div id="confirmation" class="hidden"></div>
+
+</body>
+</html>
